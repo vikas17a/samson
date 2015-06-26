@@ -105,3 +105,7 @@ group :test do
   gem 'query_diet'
   gem 'codeclimate-test-reporter', require: false
 end
+
+source 'https://gem.zdsys.com/gems/' do
+  gem 'meatballs_client'
+end

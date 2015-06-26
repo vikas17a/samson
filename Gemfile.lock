@@ -1,4 +1,10 @@
 PATH
+  remote: plugins/consul_env/
+  specs:
+    consul_samson_env (0.0.0)
+      meatballs_client
+
+PATH
   remote: plugins/dockerb/
   specs:
     samson_dockerb (0.0.0)
@@ -37,6 +43,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
+  remote: https://gem.zdsys.com/gems/
   specs:
     actionmailer (4.2.3)
       actionpack (= 4.2.3)
@@ -180,6 +187,7 @@ GEM
       mime-types (>= 1.16, < 3)
     maxitest (1.5.0)
       minitest (>= 5.0.0, < 5.7.0)
+    meatballs_client (0.1.1)
     metaclass (0.0.4)
     mime-types (2.6.1)
     mini_portile (0.6.2)
@@ -367,6 +375,7 @@ DEPENDENCIES
   byebug
   codeclimate-test-reporter
   coderay (~> 1.1.0)
+  consul_samson_env!
   dalli (~> 2.7.0)
   docker-api
   dogapi (~> 1.9)
@@ -379,6 +388,7 @@ DEPENDENCIES
   lograge
   logstash-event
   maxitest
+  meatballs_client!
   minitest-rails
   mocha
   mysql2 (~> 0.3)
