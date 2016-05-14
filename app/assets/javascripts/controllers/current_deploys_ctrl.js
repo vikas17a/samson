@@ -11,7 +11,7 @@ samson.controller("currentDeploysCtrl", function($scope, $http, SseFactory, $int
   }
 
   function init() {
-    $http.get('/deploys/active.json').success(function(result) {
+    $http.get('/deploy_ui/deploys/active.json').success(function(result) {
       $scope.deploys = result.deploys;
       updateUpdatedAt();
     });

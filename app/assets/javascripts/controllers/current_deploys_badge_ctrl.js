@@ -23,7 +23,7 @@ samson.controller('currentDeployBadgeCtrl', function($scope, $http, SseFactory) 
   }
 
   function init() {
-    $http.get('/deploys/active_count.json').success(function(result) {
+    $http.get('/deploy_ui/deploys/active_count.json').success(function(result) {
       $scope.currentActiveDeploys = result.deploy_count;
       updateBadge();
     });

@@ -1,4 +1,5 @@
 require 'open-uri' # needed to fetch from img.shields.io using open()
+require 'open_uri_redirections'
 
 class StagesController < ApplicationController
   include StagePermittedParams
@@ -36,7 +37,7 @@ class StagesController < ApplicationController
 
         if stale?(etag: badge)
           expires_in 1.minute, public: true
-          image = open("http://img.shields.io/badge/#{badge}.svg").read
+          image = open("http://img.shields.io/badge/#{badge}.svg", :allow_redirections => :safe).read
           render text: image, content_type: Mime::SVG
         end
       end

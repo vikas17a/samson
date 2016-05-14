@@ -1,11 +1,13 @@
 Samson::Application.routes.draw do
+ scope(:path => '/deploy_ui') do
+  
   resources :projects do
     resources :jobs, only: [:index, :new, :create, :show, :destroy]
 
     resources :macros, only: [:index, :new, :create, :edit, :update, :destroy] do
       member { post :execute }
     end
-
+  
     resources :builds, only: [:show, :index, :new, :create, :edit, :update] do
       member do
         post :build_docker_image
@@ -107,4 +109,5 @@ Samson::Application.routes.draw do
   mount SseRailsEngine::Engine, at: '/streaming'
 
   root to: 'projects#index'
+ end
 end

@@ -5,7 +5,7 @@ samson.factory('SseFactory', function() {
     connection: null,
 
     init: function() {
-      this.connection = new EventSource(window.location.origin + '/streaming');
+      this.connection = new EventSource(window.location.origin + '/stream' + '/streaming');
     },
 
     on: function(event, callback) {

@@ -171,7 +171,7 @@ samson.factory("Deploys",
 
         Deploys.loading = true;
 
-        $http.get("/deploys/recent.json", { params: { page: Deploys.page } }).
+        $http.get("/deploy_ui/deploys/recent.json", { params: { page: Deploys.page } }).
           success(function(data) {
             var deploys = data.deploys;
 

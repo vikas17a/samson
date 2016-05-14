@@ -6,6 +6,8 @@ gem 'rails', '~> 4.2.0'
 gem 'puma'
 gem 'dotenv-rails', '~> 0.9'
 
+gem 'open_uri_redirections'
+
 gem 'dogstatsd-ruby', '~> 1.5.0', require: 'statsd'
 gem 'goldiloader'
 

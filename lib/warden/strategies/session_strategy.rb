@@ -4,7 +4,7 @@ class Warden::Strategies::SessionStrategy < Warden::Strategies::Base
   end
 
   def authenticate!
-    redirect!('/login', origin: request.path)
+    redirect!('/deploy_ui/login', origin: request.path)
   end
 end
 

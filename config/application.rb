@@ -63,7 +63,7 @@ module Samson
     config.samson.docker = ActiveSupport::OrderedOptions.new
     config.samson.docker.registry = ENV['DOCKER_REGISTRY'].presence
 
-    config.samson.uri = URI( ENV["DEFAULT_URL"] || 'http://localhost:3000' )
+    config.samson.uri = URI( ENV["DEFAULT_URL"] || 'http://localhost/deploy_ui' )
     self.default_url_options = {
       host: config.samson.uri.host,
       protocol: config.samson.uri.scheme
